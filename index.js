@@ -110,7 +110,7 @@
       } else if(options.stopAboveErrorThreshold && totalErrorCount > options.errorThreshold) {
         reportErrorTally();
         log.error('\n' + chalk.red('There are more than ' + options.errorThreshold + ' errors'));
-        process.exit();
+        process.exit(1);
       } else {
         reportErrorTally();
         done(null, content);
